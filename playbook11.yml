@@ -1,0 +1,10 @@
+---
+- name: install software
+  hosts: all
+  tasks:
+   - name: install s/w
+     apt:
+      name: ["tree","openjdk-8-jdk","maven"]
+      state: present
+      update_cache: no
+      
