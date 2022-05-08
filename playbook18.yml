@@ -11,6 +11,7 @@
    - name: edit index.html file
      copy:
       content: "intelliqit"
-      dest: /home/ubuntu
+      dest: /var/www/html/index.html
      notify:
+   - name: restart apache2
    
