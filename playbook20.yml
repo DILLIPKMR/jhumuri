@@ -1,0 +1,17 @@
+---
+- name: checkfloder and file
+  hosts: all 
+  tasks:
+   - name: check for d1 derectory
+     state:
+      path: /home/ubuntu/d1
+     register: a
+   - name: display out of above module
+     debug:
+     var: a
+   - name: create file d1 if dir  d1 is not present
+     file:
+      name: /home/ubuntu/d1
+      state: touch
+     when: a.stat.exists==false
+     
