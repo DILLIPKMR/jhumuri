@@ -1,4 +1,4 @@
 ---
 - name: copy /etc/passwd file
-  src: /home/ubuntu/jhumuri
+  src: /home/ubuntu
   dest: /tmp 
