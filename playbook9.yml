@@ -1,0 +1,10 @@
+---
+- name: install firewall using host variable
+  hosts: 172.31.21.237
+  tasks:
+   - name: install firewall
+     apt:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
+...
