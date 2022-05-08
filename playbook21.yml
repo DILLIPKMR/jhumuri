@@ -1,4 +1,5 @@
 ---
-- name: copy /home/ubuntu file
-  src: /home/ubuntu
-  dest: /tmp 
+- name: copy /etc/passwd file
+  copy:
+   src: /etc/passwd
+   dest: /tmp 
