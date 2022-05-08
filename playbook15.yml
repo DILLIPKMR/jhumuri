@@ -11,7 +11,7 @@
      user: 
       name: ranu
       password: janu
-     tag: user creat
+     tags: user creat
    - name: copy/etc/password file
      copy:
       src: /etc/password
