@@ -6,7 +6,7 @@
      apt:
       name: install tree
       state: present
-     tag: tree install
+     tags: tree install
    - name: creation user
      user: 
       name: ranu

@@ -6,6 +6,7 @@
      apt:
       name: apache2
       state: absent
+     tags: apache2 install
    - name: edit the index.html
      copy:
       content: "intelliqit"
@@ -14,6 +15,7 @@
      service:
       name: apache2
       state: restarted
+     tags: apache2 restart 
    - name: check are response
      uri:
       url: "{{item}}"
@@ -23,4 +25,3 @@
       - https://172.31.26.195
       - https://172.31.26.148
       - https://172.31.21.237
-      
