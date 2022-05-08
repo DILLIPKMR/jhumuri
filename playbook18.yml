@@ -1,0 +1,16 @@
+---
+- name: implementing handlers
+  hosts: all
+  tasks:
+   - name: install apache2
+     apt:
+      name: apache2
+      state: present
+      update_cache: no 
+     notify: check url response
+   - name: edit index.html file
+     copy:
+      content: "intelliqit"
+      dest: /home/ubuntu
+     notify:
+   
