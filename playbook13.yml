@@ -1,0 +1,26 @@
+---
+- name: configuration apache2
+  hosts: all
+  tasks: 
+   - name: apache2
+     apt:
+      name: apache2
+      state: absent
+   - name: edit the index.html
+     copy:
+      content: "intelliqit"
+      dest: /var/www/html/index.html
+   - name: restart apache2
+     service:
+      name: apache2
+      state: restarted
+   - name: check are response
+     uri:
+      url: "{{item}}"
+      status_code: 200
+     with_items:
+      - https:// 172.31.30.174
+      - https://172.31.26.195
+      - https://172.31.26.148
+      - https://172.31.21.237
+      
