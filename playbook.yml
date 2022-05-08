@@ -2,12 +2,12 @@
 - name: create user
   hosts: all
   tasks:
-    - name: user
+    - name: usercreat
       user:
        name: sai
        password: intelliqit
        uid: 3421
        home: /home/ubuntu/sai
-       comment: "love you"
+       comment: "love you my"
        shell: /bin/bash
 ...
