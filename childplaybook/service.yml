@@ -1,0 +1,6 @@
+---
+- name: restart apache2
+  server: 
+   name: apache2
+   state: restart
+   
