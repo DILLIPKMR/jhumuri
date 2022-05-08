@@ -2,7 +2,7 @@
 - name: implementing when condition
   hosts: all 
   vars:
-   - a: 20
+   - a: 10
   tasks:
    - name: create user 
      user:
