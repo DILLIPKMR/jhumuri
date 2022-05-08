@@ -1,0 +1,14 @@
+---
+- name: install/unstall
+  hosts: all
+  vars:
+  - a: tomcat9
+  - b: present
+  - c: no
+  tasks:
+   - name: install/unstall
+     apt:
+      name: "{{a}}"
+      state: "{{b}}"
+      present: "{{c}}"
+      
