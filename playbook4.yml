@@ -1,0 +1,9 @@
+---
+- name: install/unstall software
+  hosts: all
+  tasks:
+   - name: install/unstall
+     apt:
+      name: tree 
+      state: present
+      update_cache: no
